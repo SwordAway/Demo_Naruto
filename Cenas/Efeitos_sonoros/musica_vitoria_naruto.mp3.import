@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/musica_vitoria_naruto.mp3-c9b6d61308f06fe452a068080c384125.mp3str"
+
+[deps]
+
+source_file="res://Cenas/Efeitos_sonoros/musica_vitoria_naruto.mp3"
+dest_files=[ "res://.import/musica_vitoria_naruto.mp3-c9b6d61308f06fe452a068080c384125.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

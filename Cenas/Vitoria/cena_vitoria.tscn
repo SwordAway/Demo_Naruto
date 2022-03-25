@@ -1,0 +1,133 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Cenas/Fonte/njnaruto.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Cenas/Vitoria/script_vitoria.gd" type="Script" id=2]
+[ext_resource path="res://Cenas/Vitoria/Imagens/cena_vitoria.png" type="Texture" id=3]
+[ext_resource path="res://Cenas/Vitoria/Imagens/Sasuke Vitoria.png" type="Texture" id=4]
+[ext_resource path="res://Cenas/Efeitos_sonoros/musica_vitoria_sasuke.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Cenas/Efeitos_sonoros/musica_vitoria_naruto.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Cenas/Efeitos_sonoros/som_shirken_click.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Cenas/Efeitos_sonoros/selec_personagem.mp3" type="AudioStream" id=8]
+
+[sub_resource type="DynamicFont" id=5]
+size = 43
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 5
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 1, 0.4, 0, 1 )
+border_blend = true
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.996078, 0.443137, 0.0588235, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[node name="Vitoria" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Img_naruto" type="Sprite" parent="."]
+position = Vector2( 640, 360 )
+scale = Vector2( 2, 1.49956 )
+texture = ExtResource( 3 )
+
+[node name="Img_sasuke" type="Sprite" parent="."]
+position = Vector2( 640, 360 )
+scale = Vector2( 2, 1.49956 )
+texture = ExtResource( 4 )
+
+[node name="Butt_Inicio" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.5
+margin_top = -196.0
+margin_right = 98.5
+margin_bottom = -134.0
+custom_fonts/font = SubResource( 5 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Inicio"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="Music_naruto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -15.0
+
+[node name="Music_sasuke" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -15.0
+
+[node name="Som_selec" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -10.0
+
+[node name="Som_press" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -10.0
+
+[node name="Som_fala_naruto" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0
+
+[node name="Som_fala_sasuke" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0
+
+[connection signal="mouse_entered" from="Butt_Inicio" to="." method="_on_Butt_Inicio_mouse_entered"]
+[connection signal="pressed" from="Butt_Inicio" to="." method="_on_Butt_Inicio_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

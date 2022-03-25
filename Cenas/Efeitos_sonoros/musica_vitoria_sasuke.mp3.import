@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/musica_vitoria_sasuke.mp3-6112c1251e12bd833b34a95d79e98096.mp3str"
+
+[deps]
+
+source_file="res://Cenas/Efeitos_sonoros/musica_vitoria_sasuke.mp3"
+dest_files=[ "res://.import/musica_vitoria_sasuke.mp3-6112c1251e12bd833b34a95d79e98096.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

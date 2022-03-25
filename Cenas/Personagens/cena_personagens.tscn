@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Cenas/Personagens/script_naruto.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 18.2603, 35.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+[node name="Personagens_NO" type="Node2D"]
+
+[node name="Naruto" type="KinematicBody2D" parent="."]
+collision_mask = 15
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+forca_do_pulo = -800
+
+[node name="Colli_corpo" type="CollisionShape2D" parent="Naruto"]
+scale = Vector2( 0.91141, 0.91141 )
+shape = SubResource( 1 )
+
+[node name="Camera" type="Camera2D" parent="Naruto"]
+current = true
+zoom = Vector2( 0.7, 0.7 )
+process_mode = 0
+limit_left = 0
+limit_top = -660
+limit_right = 2560
+limit_bottom = 720
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 10.0
+drag_margin_left = 0.5
+drag_margin_top = 0.5
+drag_margin_right = 0.5
+drag_margin_bottom = 0.5
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="Img_naruto" type="Sprite" parent="Naruto"]
+
+[node name="Fumaca" type="AnimationPlayer" parent="Naruto"]
+
+[node name="Anima" type="AnimationPlayer" parent="Naruto"]
+
+[node name="Shuriken_Clone" type="Position2D" parent="Naruto"]
+
+[node name="Img_fumaca" type="Sprite" parent="Naruto"]
+
+[node name="Recebe_dano" type="Area2D" parent="Naruto"]
+collision_layer = 32
+collision_mask = 4
+
+[node name="Colli_recb_dano" type="CollisionShape2D" parent="Naruto/Recebe_dano"]
+shape = SubResource( 2 )
+
+[node name="Socos_chutes" type="Area2D" parent="Naruto"]
+collision_layer = 16
+collision_mask = 8
+
+[node name="Colli_socos_chutes" type="CollisionShape2D" parent="Naruto/Socos_chutes"]
+shape = SubResource( 3 )

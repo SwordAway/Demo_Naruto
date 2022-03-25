@@ -1,0 +1,1288 @@
+[gd_scene load_steps=81 format=2]
+
+[ext_resource path="res://Cenas/Menu/script_menu.gd" type="Script" id=1]
+[ext_resource path="res://Cenas/Fonte/njnaruto.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://MouseNormal.tres" type="StyleBox" id=3]
+[ext_resource path="res://MouseDesabilitado.tres" type="StyleBox" id=4]
+[ext_resource path="res://MouseClick.tres" type="StyleBox" id=5]
+[ext_resource path="res://MouseCima.tres" type="StyleBox" id=6]
+[ext_resource path="res://Cenas/Menu/Imagens/naruto_on.png" type="Texture" id=7]
+[ext_resource path="res://Cenas/Menu/Imagens/sasuke_on.png" type="Texture" id=8]
+[ext_resource path="res://Cenas/Menu/Imagens/nuvem.png" type="Texture" id=9]
+[ext_resource path="res://Cenas/Menu/Imagens/background_selec_person.png" type="Texture" id=10]
+
+[sub_resource type="StreamTexture" id=6]
+flags = 4
+load_path = "res://.import/aldeiaboa.png-4e0d37dc9fb69b631664b4d1b6beb3b3.stex"
+
+[sub_resource type="StreamTexture" id=7]
+flags = 4
+load_path = "res://.import/neruto.png-fc7f9aee445eedfbf017945ec414eabe.stex"
+
+[sub_resource type="DynamicFont" id=8]
+outline_size = 2
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 1
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 1, 0.4, 0, 1 )
+border_blend = true
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.996078, 0.443137, 0.0588235, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="DynamicFont" id=15]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 2
+extra_spacing_bottom = -4
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 1, 0.4, 0, 1 )
+border_blend = true
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.996078, 0.443137, 0.0588235, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="DynamicFont" id=20]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 1
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 1, 0.4, 0, 1 )
+border_blend = true
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.996078, 0.443137, 0.0588235, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 1
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 1, 0.4, 0, 1 )
+border_blend = true
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.996078, 0.443137, 0.0588235, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="DynamicFont" id=53]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 1
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=54]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 1, 0.4, 0, 1 )
+border_blend = true
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=55]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=56]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.996078, 0.443137, 0.0588235, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=57]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=58]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 0.690196 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="DynamicFont" id=59]
+size = 18
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=60]
+size = 18
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=61]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 1
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=62]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 1, 0.4, 0, 1 )
+border_blend = true
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=63]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=64]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.996078, 0.443137, 0.0588235, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=65]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="DynamicFont" id=66]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 1
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=67]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 1, 0.4, 0, 1 )
+border_blend = true
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=68]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=69]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.996078, 0.443137, 0.0588235, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=70]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="DynamicFont" id=33]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 2
+extra_spacing_bottom = -4
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=34]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 1, 0.4, 0, 1 )
+border_blend = true
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=35]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=36]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.996078, 0.443137, 0.0588235, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=37]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="DynamicFont" id=43]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 2
+extra_spacing_bottom = -4
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=44]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 1, 0.4, 0, 1 )
+border_blend = true
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=45]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=46]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.996078, 0.443137, 0.0588235, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=47]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="DynamicFont" id=38]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 2
+extra_spacing_bottom = -4
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=39]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 1, 0.4, 0, 1 )
+border_blend = true
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=40]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=41]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.996078, 0.443137, 0.0588235, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=42]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="DynamicFont" id=48]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 1
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=49]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 1, 0.4, 0, 1 )
+border_blend = true
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=50]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=51]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.996078, 0.443137, 0.0588235, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=52]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="DynamicFont" id=32]
+size = 70
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 3
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 0.701961 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="DynamicFont" id=26]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=27]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 1, 0.4, 0, 1 )
+border_blend = true
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.996078, 0.443137, 0.0588235, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Backgraund" type="Sprite" parent="."]
+position = Vector2( 640, 360 )
+scale = Vector2( 1.33958, 1.44 )
+texture = SubResource( 6 )
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 629.941, 127.568 )
+scale = Vector2( 0.25681, 0.279675 )
+texture = SubResource( 7 )
+
+[node name="NomeJogo" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -153.5
+margin_top = -140.5
+margin_right = 153.5
+margin_bottom = -121.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "The    Battle    of    Naruto   &   Sasuke"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu_inicial" type="Control" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jogar" type="Button" parent="Menu_inicial"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -62.5
+margin_top = -18.5
+margin_right = 62.5
+margin_bottom = 18.5
+custom_fonts/font = SubResource( 9 )
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 3 )
+text = "Jogar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ranking" type="Button" parent="Menu_inicial"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -72.0
+margin_top = 25.0
+margin_right = 72.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 10 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/disabled = SubResource( 13 )
+custom_styles/normal = SubResource( 14 )
+text = "Ranking"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Configuracao" type="Button" parent="Menu_inicial"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = 70.0
+margin_right = 112.0
+margin_bottom = 108.0
+custom_fonts/font = SubResource( 15 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/disabled = SubResource( 18 )
+custom_styles/normal = SubResource( 19 )
+text = "configuracao"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Creditos" type="Button" parent="Menu_inicial"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -80.0
+margin_top = 116.0
+margin_right = 80.0
+margin_bottom = 154.0
+custom_fonts/font = SubResource( 20 )
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/disabled = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
+text = "Creditos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sair" type="Button" parent="Menu_inicial"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -49.0
+margin_top = 161.0
+margin_right = 49.0
+margin_bottom = 203.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.968627, 0.647059, 0.333333, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Sair"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sair2" type="Button" parent="Menu_inicial"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -49.0
+margin_top = 161.0
+margin_right = 49.0
+margin_bottom = 203.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.968627, 0.647059, 0.333333, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Sair"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Aba_creditos" type="ColorRect" parent="Menu_inicial"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Aba_ranking" type="ColorRect" parent="Menu_inicial"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Configuracao" type="Control" parent="."]
+margin_right = 1280.0
+margin_bottom = 718.0
+
+[node name="Controles" type="Button" parent="Configuracao"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -80.0
+margin_top = 117.0
+margin_right = 80.0
+margin_bottom = 155.0
+custom_fonts/font = SubResource( 53 )
+custom_styles/hover = SubResource( 54 )
+custom_styles/pressed = SubResource( 55 )
+custom_styles/disabled = SubResource( 56 )
+custom_styles/normal = SubResource( 57 )
+text = "Creditos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Aba_config_desk" type="ColorRect" parent="Configuracao"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -377.0
+margin_top = -154.0
+margin_right = 377.0
+margin_bottom = 276.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Caixa" type="Label" parent="Configuracao/Aba_config_desk"]
+margin_right = 754.0
+margin_bottom = 430.0
+custom_styles/normal = SubResource( 58 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jogador1" type="Label" parent="Configuracao/Aba_config_desk"]
+margin_left = 40.0
+margin_top = 63.0
+margin_right = 160.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 59 )
+text = "Jogador    1"
+
+[node name="Ctrl_jogador1" type="Label" parent="Configuracao/Aba_config_desk"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jogador2" type="Label" parent="Configuracao/Aba_config_desk"]
+margin_left = 40.0
+margin_top = 218.0
+margin_right = 160.0
+margin_bottom = 244.0
+custom_fonts/font = SubResource( 60 )
+text = "Jogador     2"
+
+[node name="Ctrl_jogador2" type="Label" parent="Configuracao/Aba_config_desk"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sair" type="Label" parent="Configuracao/Aba_config_desk"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="Crtl_img_jogador1" type="Sprite" parent="Configuracao/Aba_config_desk"]
+
+[node name="Crtl_img_jogador2" type="Sprite" parent="Configuracao/Aba_config_desk"]
+
+[node name="1_jogador" type="Button" parent="Configuracao/Aba_config_desk"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -254.0
+margin_top = -200.0
+margin_right = -110.0
+margin_bottom = -162.0
+custom_fonts/font = SubResource( 61 )
+custom_styles/hover = SubResource( 62 )
+custom_styles/pressed = SubResource( 63 )
+custom_styles/disabled = SubResource( 64 )
+custom_styles/normal = SubResource( 65 )
+text = "1 Jogador"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_jogadores" type="Button" parent="Configuracao/Aba_config_desk"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 80.0
+margin_top = -200.0
+margin_right = 254.0
+margin_bottom = -162.0
+custom_fonts/font = SubResource( 66 )
+custom_styles/hover = SubResource( 67 )
+custom_styles/pressed = SubResource( 68 )
+custom_styles/disabled = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+text = "2 jogadores"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sair_butt" type="Button" parent="Configuracao/Aba_config_desk"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -49.0
+margin_top = 160.0
+margin_right = 49.0
+margin_bottom = 202.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.968627, 0.647059, 0.333333, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Sair"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Selec_modo_jogo" type="Control" parent="."]
+visible = false
+margin_right = 1283.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Single_player" type="Button" parent="Selec_modo_jogo"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -111.5
+margin_top = -20.0
+margin_right = 112.5
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 33 )
+custom_styles/hover = SubResource( 34 )
+custom_styles/pressed = SubResource( 35 )
+custom_styles/disabled = SubResource( 36 )
+custom_styles/normal = SubResource( 37 )
+text = "1  jogador"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Single_player2" type="Button" parent="Selec_modo_jogo"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -113.5
+margin_top = 25.0
+margin_right = 110.5
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 43 )
+custom_styles/hover = SubResource( 44 )
+custom_styles/pressed = SubResource( 45 )
+custom_styles/disabled = SubResource( 46 )
+custom_styles/normal = SubResource( 47 )
+text = "1  jogador"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Multiplayer" type="Button" parent="Selec_modo_jogo"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = 70.0
+margin_right = 112.0
+margin_bottom = 108.0
+custom_fonts/font = SubResource( 38 )
+custom_styles/hover = SubResource( 39 )
+custom_styles/pressed = SubResource( 40 )
+custom_styles/disabled = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+text = "2  jogadores"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="Button" parent="Selec_modo_jogo"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -53.5
+margin_top = 161.0
+margin_right = 66.5
+margin_bottom = 203.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.968627, 0.647059, 0.333333, 1 )
+custom_fonts/font = SubResource( 48 )
+custom_styles/hover = SubResource( 49 )
+custom_styles/pressed = SubResource( 50 )
+custom_styles/disabled = SubResource( 51 )
+custom_styles/normal = SubResource( 52 )
+text = "Voltar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Selec_personagem" type="Control" parent="."]
+visible = false
+margin_right = 1280.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="Selec_personagem"]
+position = Vector2( 640, 359.5 )
+scale = Vector2( 1, 1.00139 )
+texture = ExtResource( 10 )
+
+[node name="Naruto_on" type="Sprite" parent="Selec_personagem"]
+position = Vector2( 803, 396 )
+texture = ExtResource( 7 )
+
+[node name="Sasuke_on" type="Sprite" parent="Selec_personagem"]
+position = Vector2( 365, 373 )
+texture = ExtResource( 8 )
+
+[node name="Letreiro" type="Label" parent="Selec_personagem"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -640.0
+margin_right = 640.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 32 )
+custom_styles/normal = ExtResource( 3 )
+text = "Selecione o personagem"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nuvem_baixo1" type="Sprite" parent="Selec_personagem"]
+position = Vector2( 91.7077, 54.4375 )
+scale = Vector2( 0.170605, 0.170605 )
+texture = ExtResource( 9 )
+
+[node name="Nuvem_cima1" type="Sprite" parent="Selec_personagem"]
+position = Vector2( 65, 45 )
+scale = Vector2( 0.170605, 0.170605 )
+texture = ExtResource( 9 )
+
+[node name="Nuvem_baixo2" type="Sprite" parent="Selec_personagem"]
+position = Vector2( 1188, 54.438 )
+scale = Vector2( 0.170605, 0.170605 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="Nuvem_cima2" type="Sprite" parent="Selec_personagem"]
+position = Vector2( 1217, 45 )
+scale = Vector2( 0.170605, 0.170605 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="Anima" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Selec_personagem")
+
+[node name="Popup" type="Popup" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -315.5
+margin_top = -84.0
+margin_right = 276.5
+margin_bottom = 156.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Caixa" type="Label" parent="Popup"]
+margin_right = 592.0
+margin_bottom = 240.0
+custom_styles/normal = SubResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Aviso" type="Label" parent="Popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -126.0
+margin_top = -56.5
+margin_right = 126.0
+margin_bottom = -37.5
+custom_fonts/font = SubResource( 26 )
+text = "Email   ou   Senha    Invalidos !!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fechar_popup" type="Button" parent="Popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.5
+margin_top = 3.5
+margin_right = 48.5
+margin_bottom = 30.5
+custom_colors/font_color_pressed = Color( 0.968627, 0.647059, 0.333333, 1 )
+custom_fonts/font = SubResource( 27 )
+custom_styles/hover = SubResource( 28 )
+custom_styles/pressed = SubResource( 29 )
+custom_styles/disabled = SubResource( 30 )
+custom_styles/normal = SubResource( 31 )
+text = "ok"
+
+[connection signal="pressed" from="Menu_inicial/Jogar" to="." method="_on_Jogar_pressed"]
+[connection signal="mouse_entered" from="Menu_inicial/Sair" to="." method="_on_Sair_mouse_entered"]
+[connection signal="pressed" from="Menu_inicial/Sair" to="." method="_on_Sair_pressed"]
+[connection signal="mouse_entered" from="Menu_inicial/Sair2" to="." method="_on_Sair_mouse_entered"]
+[connection signal="pressed" from="Menu_inicial/Sair2" to="." method="_on_Sair_pressed"]
+[connection signal="mouse_entered" from="Selec_modo_jogo/Voltar" to="." method="_on_Voltar_mouse_entered"]
+[connection signal="pressed" from="Selec_modo_jogo/Voltar" to="." method="_on_Voltar_pressed"]
