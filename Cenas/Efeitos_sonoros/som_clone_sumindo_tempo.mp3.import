@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som_clone_sumindo_tempo.mp3-4bb7fa79fdd91523d4eb3831b88a6c58.mp3str"
+
+[deps]
+
+source_file="res://Cenas/Efeitos_sonoros/som_clone_sumindo_tempo.mp3"
+dest_files=[ "res://.import/som_clone_sumindo_tempo.mp3-4bb7fa79fdd91523d4eb3831b88a6c58.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

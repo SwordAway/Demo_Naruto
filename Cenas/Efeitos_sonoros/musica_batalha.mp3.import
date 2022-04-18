@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/musica_batalha.mp3-d5370b532bb24535e56687bd67ff2e0b.mp3str"
+
+[deps]
+
+source_file="res://Cenas/Efeitos_sonoros/musica_batalha.mp3"
+dest_files=[ "res://.import/musica_batalha.mp3-d5370b532bb24535e56687bd67ff2e0b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

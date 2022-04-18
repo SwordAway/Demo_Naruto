@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voz_empresa.mp3-dfef763dd975b2f02a3fc04c968a66e3.mp3str"
+
+[deps]
+
+source_file="res://Cenas/Efeitos_sonoros/voz_empresa.mp3"
+dest_files=[ "res://.import/voz_empresa.mp3-dfef763dd975b2f02a3fc04c968a66e3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

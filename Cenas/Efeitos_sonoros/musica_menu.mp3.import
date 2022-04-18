@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/musica_menu.mp3-e862725ee1e3fba748d2238f367ce022.mp3str"
+
+[deps]
+
+source_file="res://Cenas/Efeitos_sonoros/musica_menu.mp3"
+dest_files=[ "res://.import/musica_menu.mp3-e862725ee1e3fba748d2238f367ce022.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,342 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Cenas/Fonte/njnaruto.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Cenas/Loading/Imagens/loading_0.png" type="Texture" id=2]
+[ext_resource path="res://Cenas/Loading/Imagens/loading_1.png" type="Texture" id=3]
+[ext_resource path="res://Cenas/Loading/Imagens/loading_2.png" type="Texture" id=4]
+[ext_resource path="res://Cenas/Loading/Imagens/loading_3.png" type="Texture" id=5]
+[ext_resource path="res://Cenas/Personagens/Imagens_Naruto/naruto_run.png" type="Texture" id=6]
+[ext_resource path="res://Cenas/Personagens/Imagens_Sasuke/sasuke_run.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+corner_detail = 16
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends ProgressBar
+
+var bg_loading = 0
+onready var img1 = $Loading_1
+onready var img2 = $Loading_2
+onready var img3 = $Loading_3
+onready var img4 = $Loading_4
+
+
+
+
+func _bg_aleatorio():
+	randomize()
+	bg_loading = randi()%4 +1
+
+func _ready():
+	_bg_aleatorio()
+#	print(\"Bg_loagin: \", bg_loading)
+#	print(\"loading: \", ScriptGlobal.loading)
+	
+	if(bg_loading == 1):
+		img1.visible = true
+		img2.visible = false
+		img3.visible = false
+		img4.visible = false
+		
+	elif(bg_loading == 2):
+		img1.visible = false
+		img2.visible = true
+		img3.visible = false
+		img4.visible = false
+	elif(bg_loading == 3):
+		img1.visible = false
+		img2.visible = false
+		img3.visible = true
+		img4.visible = false
+	elif(bg_loading == 4):
+		img1.visible = false
+		img2.visible = false
+		img3.visible = false
+		img4.visible = true
+	
+	if(ScriptGlobal.loading != 0):
+		$\".\".visible = true
+		$Fundo_preto.visible = false
+		if(ScriptGlobal.loading !=2):
+			
+			pass
+		else:
+			$Fundo_preto.visible = true
+	else:
+		$\".\".visible = false
+	pass
+	
+"
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Naruto:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sasuke:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sasuke:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 64, -60 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "naruto_correndo"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Naruto:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Naruto:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Naruto:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Naruto:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 226, -77 ), Vector2( 228, -77 ), Vector2( 226, -77 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Naruto:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.88678, 1.88678 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sasuke:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sasuke:hframes")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sasuke:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Sasuke:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 70, -60 ), Vector2( 64, -60 ), Vector2( 70.2, -60 ), Vector2( 83.15, -60 ), Vector2( 88.7667, -60 ), Vector2( 92.3834, -60 ), Vector2( 92, -60 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Sasuke:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.887, 1.887 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.968627, 0.647059, 0.333333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 0.4, 0, 1 )
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+
+[node name="Barra_progress" type="ProgressBar"]
+margin_left = 953.0
+margin_top = 673.0
+margin_right = 1241.0
+margin_bottom = 700.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+value = 59.0
+script = SubResource( 4 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 0.0 ],
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [ 0.0, 1280.0, 910.0 ]
+}
+
+[node name="Loading_1" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( -313, -313 )
+scale = Vector2( 2.84444, 2.53521 )
+z_as_relative = false
+texture = ExtResource( 2 )
+
+[node name="Loading_2" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( -313, -313 )
+scale = Vector2( 2.37037, 1.03746 )
+z_as_relative = false
+texture = ExtResource( 3 )
+
+[node name="Loading_3" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( -313, -313 )
+scale = Vector2( 2.48062, 1.01124 )
+z_as_relative = false
+texture = ExtResource( 4 )
+
+[node name="Loading_4" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( -313, -313 )
+scale = Vector2( 1.26607, 0.351562 )
+z_as_relative = false
+texture = ExtResource( 5 )
+
+[node name="Anima" type="AnimationPlayer" parent="."]
+autoplay = "naruto_correndo"
+anims/RESET = SubResource( 6 )
+anims/naruto_correndo = SubResource( 7 )
+
+[node name="Fundo_barra" type="Label" parent="."]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 292.0
+margin_bottom = 31.0
+custom_styles/normal = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Naruto" type="Sprite" parent="."]
+position = Vector2( 226, -77 )
+scale = Vector2( 1.88678, 1.88678 )
+texture = ExtResource( 6 )
+hframes = 6
+
+[node name="Sasuke" type="Sprite" parent="."]
+position = Vector2( 64, -60 )
+scale = Vector2( 1.887, 1.887 )
+texture = ExtResource( 7 )
+hframes = 6
+
+[node name="Fundo_preto" type="ColorRect" parent="."]
+margin_left = -953.0
+margin_top = -673.0
+margin_right = 327.0
+margin_bottom = 47.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

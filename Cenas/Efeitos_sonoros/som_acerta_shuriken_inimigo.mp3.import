@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som_acerta_shuriken_inimigo.mp3-73074d436f1dd3bf532d4beddab1d869.mp3str"
+
+[deps]
+
+source_file="res://Cenas/Efeitos_sonoros/som_acerta_shuriken_inimigo.mp3"
+dest_files=[ "res://.import/som_acerta_shuriken_inimigo.mp3-73074d436f1dd3bf532d4beddab1d869.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

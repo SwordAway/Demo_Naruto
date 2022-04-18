@@ -1,0 +1,192 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Cenas/Mobile/Imagens/engrenagem_simbolo.png" type="Texture" id=1]
+[ext_resource path="res://Cenas/Mobile/Imagens/botao_shuriken_press.png" type="Texture" id=2]
+[ext_resource path="res://Cenas/Mobile/Imagens/botao_soco_normal.png" type="Texture" id=3]
+[ext_resource path="res://Cenas/Mobile/Imagens/botao_clone_press.png" type="Texture" id=4]
+[ext_resource path="res://Cenas/Mobile/Imagens/jutsu_sasuke_3.png" type="Texture" id=5]
+[ext_resource path="res://Cenas/Mobile/Imagens/botao_soco_press.png" type="Texture" id=6]
+[ext_resource path="res://Cenas/Mobile/script_control_interface.gd" type="Script" id=7]
+[ext_resource path="res://Cenas/Mobile/Imagens/botao_clone_normal.png" type="Texture" id=8]
+[ext_resource path="res://Cenas/Mobile/Imagens/botao_drop_plataform.png" type="Texture" id=9]
+[ext_resource path="res://Cenas/Mobile/Imagens/jutsu_sasuke_3_press.png" type="Texture" id=10]
+[ext_resource path="res://Cenas/Mobile/Imagens/botao_shuriken_normal.png" type="Texture" id=11]
+[ext_resource path="res://Cenas/Mobile/Imagens/botao_defender_press.png" type="Texture" id=12]
+[ext_resource path="res://Cenas/Mobile/Imagens/botao_drop_plataform_pressed.png" type="Texture" id=13]
+[ext_resource path="res://Cenas/Mobile/Imagens/botao_defender_normal.png" type="Texture" id=14]
+[ext_resource path="res://Cenas/Mobile/Imagens/joystick_fundo.png" type="Texture" id=15]
+[ext_resource path="res://Cenas/Mobile/Imagens/joystick_dentro.png" type="Texture" id=16]
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 32.0
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/botao_direita_normal.png-cc74116eb7d385eec4944d11fc01c120.stex"
+
+[sub_resource type="StreamTexture" id=2]
+load_path = "res://.import/botao_direita_press.png-a93c7a71b795693456526b0b77a0fd99.stex"
+
+[sub_resource type="StreamTexture" id=3]
+load_path = "res://.import/botao_esquerda_normal.png-1809746d1153728fa5871d2642fc15cf.stex"
+
+[sub_resource type="StreamTexture" id=4]
+load_path = "res://.import/botao_esquerda_press.png-9bb8b8761d9decb1dcfed5cb27fec7de.stex"
+
+[sub_resource type="StreamTexture" id=5]
+load_path = "res://.import/botao_baixo_normal.png-537ebbe270a872c37146c8a6969f3895.stex"
+
+[sub_resource type="StreamTexture" id=6]
+load_path = "res://.import/botao_baixo_press.png-e7294e64b361174f926423dc939031cd.stex"
+
+[sub_resource type="StreamTexture" id=7]
+load_path = "res://.import/botao_cima_normal.png-daff79dfa43031b0e8313f25a428431c.stex"
+
+[sub_resource type="StreamTexture" id=8]
+load_path = "res://.import/botao_cima_press.png-e5811ac38534757512a87053f8fd2a9d.stex"
+
+[sub_resource type="StreamTexture" id=10]
+load_path = "res://.import/botao_run_normal.png-83af2f489789731c05aeadeebe314f85.stex"
+
+[sub_resource type="StreamTexture" id=9]
+load_path = "res://.import/botao_idle_normal.png-f4b1e3637b7945d3a3409320b19a4ed9.stex"
+
+[node name="Control_interface" type="CanvasLayer"]
+script = ExtResource( 7 )
+
+[node name="Control" type="Control" parent="."]
+modulate = Color( 1, 1, 1, 0.764706 )
+margin_right = 1280.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Joystick" type="TouchScreenButton" parent="Control"]
+visible = false
+show_behind_parent = true
+position = Vector2( 105, 478 )
+scale = Vector2( 3.53125, 3.53125 )
+normal = ExtResource( 15 )
+shape = SubResource( 11 )
+
+[node name="Bolinha_dentro" type="Sprite" parent="Control/Joystick"]
+position = Vector2( 32, 32 )
+scale = Vector2( 0.350914, 0.350914 )
+texture = ExtResource( 16 )
+
+[node name="Esquerda" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.768627 )
+position = Vector2( 70, 540 )
+scale = Vector2( 1.85723, 1.85723 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+passby_press = true
+action = "esquerda"
+visibility_mode = 1
+
+[node name="Direita" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.768627 )
+position = Vector2( 207, 540 )
+scale = Vector2( 1.85938, 1.85937 )
+normal = SubResource( 3 )
+pressed = SubResource( 4 )
+passby_press = true
+action = "direita"
+visibility_mode = 1
+
+[node name="Baixo" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.768627 )
+position = Vector2( 784, 591 )
+scale = Vector2( 1.60938, 1.5625 )
+normal = SubResource( 5 )
+pressed = SubResource( 6 )
+action = "baixo"
+visibility_mode = 1
+
+[node name="Cima" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.768627 )
+position = Vector2( 784, 466 )
+scale = Vector2( 1.61455, 1.61455 )
+normal = SubResource( 7 )
+pressed = SubResource( 8 )
+action = "cima"
+visibility_mode = 1
+
+[node name="Jutsu_1" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.768627 )
+position = Vector2( 1050, 390 )
+scale = Vector2( 1.42872, 1.42872 )
+normal = ExtResource( 8 )
+pressed = ExtResource( 4 )
+action = "jutsu1_single"
+visibility_mode = 1
+
+[node name="Jutsu_3" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.768627 )
+position = Vector2( 1170, 414 )
+scale = Vector2( 1.31602, 1.31602 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 10 )
+action = "jutsu3_single"
+visibility_mode = 1
+
+[node name="Shuriken" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.768627 )
+position = Vector2( 934, 450 )
+scale = Vector2( 4.2471, 4.2471 )
+normal = ExtResource( 11 )
+pressed = ExtResource( 2 )
+action = "shuriken_single"
+visibility_mode = 1
+
+[node name="Socos" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.768627 )
+position = Vector2( 1016, 544 )
+scale = Vector2( 0.595855, 0.595855 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 6 )
+action = "combo_single"
+visibility_mode = 1
+
+[node name="Correr" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.768627 )
+position = Vector2( 16, 376 )
+scale = Vector2( 0.379916, 0.379916 )
+normal = SubResource( 10 )
+action = "correr_mobile"
+visibility_mode = 1
+
+[node name="Andando" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.768627 )
+position = Vector2( 16, 376 )
+scale = Vector2( 0.379791, 0.379791 )
+normal = SubResource( 9 )
+action = "correr_mobile"
+visibility_mode = 1
+
+[node name="Menu" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.768627 )
+position = Vector2( 1176, 8 )
+scale = Vector2( 0.248518, 0.248518 )
+normal = ExtResource( 1 )
+action = "pause"
+visibility_mode = 1
+
+[node name="Drop_plataform" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.768627 )
+position = Vector2( 416, 600 )
+rotation = 0.00155493
+scale = Vector2( 1.8753, 1.8753 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 13 )
+action = "descer_plataforma"
+visibility_mode = 1
+
+[node name="Defender" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.768627 )
+position = Vector2( 1176, 616 )
+scale = Vector2( 0.345699, 0.345699 )
+normal = ExtResource( 14 )
+pressed = ExtResource( 12 )
+action = "defender"
+visibility_mode = 1

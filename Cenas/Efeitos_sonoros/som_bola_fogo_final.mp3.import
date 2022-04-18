@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som_bola_fogo_final.mp3-26d5ffb864463fff402237ee3644a8ae.mp3str"
+
+[deps]
+
+source_file="res://Cenas/Efeitos_sonoros/som_bola_fogo_final.mp3"
+dest_files=[ "res://.import/som_bola_fogo_final.mp3-26d5ffb864463fff402237ee3644a8ae.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

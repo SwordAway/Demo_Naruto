@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voz_em_parceria.mp3-486e290b86428e9c88f6ec14540fccf0.mp3str"
+
+[deps]
+
+source_file="res://Cenas/Efeitos_sonoros/voz_em_parceria.mp3"
+dest_files=[ "res://.import/voz_em_parceria.mp3-486e290b86428e9c88f6ec14540fccf0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

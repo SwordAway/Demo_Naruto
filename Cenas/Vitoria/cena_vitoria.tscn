@@ -73,12 +73,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Img_naruto" type="Sprite" parent="."]
+[node name="Control" type="Sprite" parent="."]
+
+[node name="Img_naruto" type="Sprite" parent="Control"]
 position = Vector2( 640, 360 )
 scale = Vector2( 2, 1.49956 )
 texture = ExtResource( 3 )
 
-[node name="Img_sasuke" type="Sprite" parent="."]
+[node name="Img_sasuke" type="Sprite" parent="Control"]
 position = Vector2( 640, 360 )
 scale = Vector2( 2, 1.49956 )
 texture = ExtResource( 4 )
@@ -88,10 +90,11 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -98.5
-margin_top = -196.0
-margin_right = 98.5
-margin_bottom = -134.0
+margin_left = -85.0
+margin_top = -199.0
+margin_right = 112.0
+margin_bottom = -137.0
+rect_scale = Vector2( 0.819, 0.819 )
 custom_fonts/font = SubResource( 5 )
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
@@ -127,6 +130,10 @@ volume_db = -10.0
 
 [node name="Som_fala_sasuke" type="AudioStreamPlayer" parent="."]
 volume_db = -10.0
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( 640, 360 )
+current = true
 
 [connection signal="mouse_entered" from="Butt_Inicio" to="." method="_on_Butt_Inicio_mouse_entered"]
 [connection signal="pressed" from="Butt_Inicio" to="." method="_on_Butt_Inicio_pressed"]

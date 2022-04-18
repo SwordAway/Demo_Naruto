@@ -68,7 +68,7 @@ corner_radius_bottom_left = 31
 [sub_resource type="Animation" id=6]
 length = 10.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("Naruteiro:texture")
+tracks/0/path = NodePath("Img_game_over/Naruteiro:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -80,7 +80,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 8 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Susukeiro:texture")
+tracks/1/path = NodePath("Img_game_over/Susukeiro:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -92,7 +92,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 7 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Naruteiro:visible")
+tracks/2/path = NodePath("Img_game_over/Naruteiro:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -104,7 +104,7 @@ tracks/2/keys = {
 "values": [ true, false, true, false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Susukeiro:visible")
+tracks/3/path = NodePath("Img_game_over/Susukeiro:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -121,7 +121,7 @@ resource_name = "batidafinal"
 length = 0.5
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Naruteiro:visible")
+tracks/0/path = NodePath("Img_game_over/Naruteiro:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -133,7 +133,7 @@ tracks/0/keys = {
 "values": [ true, false, true, false, true, false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Susukeiro:visible")
+tracks/1/path = NodePath("Img_game_over/Susukeiro:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -149,7 +149,7 @@ tracks/1/keys = {
 resource_name = "inicio"
 length = 7.6
 tracks/0/type = "value"
-tracks/0/path = NodePath("Naruteiro:texture")
+tracks/0/path = NodePath("Img_game_over/Naruteiro:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -161,7 +161,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 8 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Susukeiro:texture")
+tracks/1/path = NodePath("Img_game_over/Susukeiro:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -173,7 +173,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 7 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Naruteiro:visible")
+tracks/2/path = NodePath("Img_game_over/Naruteiro:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -185,7 +185,7 @@ tracks/2/keys = {
 "values": [ true, false, true, false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Susukeiro:visible")
+tracks/3/path = NodePath("Img_game_over/Susukeiro:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -206,9 +206,40 @@ __meta__ = {
 }
 
 [node name="Img_game_over" type="Sprite" parent="."]
+show_behind_parent = true
 position = Vector2( 640, 360 )
 scale = Vector2( 2.13333, 1.80011 )
 texture = ExtResource( 6 )
+
+[node name="Naruteiro" type="Sprite" parent="Img_game_over"]
+position = Vector2( -149.934, 0 )
+scale = Vector2( 1.33274, 1.77767 )
+texture = ExtResource( 8 )
+
+[node name="Susukeiro" type="Sprite" parent="Img_game_over"]
+position = Vector2( 148.558, 0 )
+scale = Vector2( 1.16494, 2.06173 )
+texture = ExtResource( 7 )
+
+[node name="Butt_Inicio" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -85.0
+margin_top = 161.0
+margin_right = 112.0
+margin_bottom = 223.0
+rect_scale = Vector2( 0.818744, 0.818744 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Inicio"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
@@ -222,35 +253,6 @@ volume_db = -10.0
 stream = ExtResource( 3 )
 volume_db = -10.0
 
-[node name="Naruteiro" type="Sprite" parent="."]
-position = Vector2( 320.142, 360 )
-scale = Vector2( 2.84318, 3.2 )
-texture = ExtResource( 8 )
-
-[node name="Susukeiro" type="Sprite" parent="."]
-position = Vector2( 956.924, 360 )
-scale = Vector2( 2.4852, 3.71134 )
-texture = ExtResource( 7 )
-
-[node name="Butt_Inicio" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -98.5
-margin_top = -196.0
-margin_right = 98.5
-margin_bottom = -134.0
-custom_fonts/font = SubResource( 1 )
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/disabled = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
-text = "Inicio"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Anima" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 6 )
 anims/batidafinal = SubResource( 8 )
@@ -259,6 +261,10 @@ anims/inicio = SubResource( 7 )
 [node name="Timer" type="Timer" parent="."]
 wait_time = 22.0
 one_shot = true
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( 640, 360 )
+current = true
 
 [connection signal="mouse_entered" from="Butt_Inicio" to="." method="_on_Butt_Inicio_mouse_entered"]
 [connection signal="pressed" from="Butt_Inicio" to="." method="_on_Butt_Inicio_pressed"]

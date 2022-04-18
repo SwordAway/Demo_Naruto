@@ -18,7 +18,7 @@ func _ready():
 func _on_Button_pressed():
 	ScriptGlobal.personagem = 1
 	get_tree().change_scene("res://Cenas/Vitoria/cena_vitoria.tscn")
-	pass # Replace with function body.
+
 
 func _on_Button2_pressed():
 	get_tree().change_scene("res://Cenas/Game_over/cena_game_over.tscn")

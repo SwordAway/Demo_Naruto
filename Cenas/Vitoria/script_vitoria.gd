@@ -5,11 +5,17 @@ extends Control
 func _musica():
 	if(ScriptGlobal.status_music == true):
 		if(ScriptGlobal.personagem == 1):
-			if(not $Music_naruto.playing):
+			if(not $Music_naruto.playing && ScriptGlobal.loading_som == true):
 				$Music_naruto.play()
-		else:
-			if(not $Music_sasuke.playing):
+			if($Music_naruto.playing && ScriptGlobal.loading_som == false):
+				$Music_naruto.stop()
+			
+		if(ScriptGlobal.personagem == 2):
+			if(not $Music_sasuke.playing && ScriptGlobal.loading_som == true):
 				$Music_sasuke.play()
+			if($Music_sasuke.playing && ScriptGlobal.loading_som == false):
+				$Music_sasuke.stop()
+		
 	else:
 		$Music_naruto.stop()
 		$Music_sasuke.stop()
@@ -30,7 +36,7 @@ func _som_press():
 	if(ScriptGlobal.status_som == true):
 		$Som_press.play()
 	else:
-		$Som_press.stop()	
+		$Som_press.stop()
 
 # Função de som de selecionar
 func _som_selec():
@@ -40,28 +46,32 @@ func _som_selec():
 		$Som_selec.stop()
 
 func _ready():
-	$Img_naruto.visible = false
-	$Img_sasuke.visible = false
-	
+	ScriptGlobal.cenario_excluir = true
+	ScriptGlobal.pause_excluir = true
+	ScriptGlobal.loading = 1
+	ScriptGlobal.loading_som = true
+	$Control/Img_naruto.visible = false
+	$Control/Img_sasuke.visible = false
 	_musica()
 	
 	if(ScriptGlobal.personagem == 1):
-		$Img_naruto.visible = true
+		$Control/Img_naruto.visible = true
 	else:
-		$Img_sasuke.visible = true
-	pass
+		$Control/Img_sasuke.visible = true
+
 
 
 #--- verifica se pode tocar musica ---
 func _process(delta):
 	_musica()
-	pass
 
 #--- Quando apertar o botão ---
 func _on_Butt_Inicio_pressed():
 	_som_press()
-	get_tree().change_scene("res://Cenas/Menu/cena_menu.tscn")
-	pass
+	ScriptGlobal.venceu = true
+	ScriptChangeLoading.ir_para("res://Cenas/Menu/cena_menu.tscn", self)
+	ScriptGlobal.loading_som = false
+
 
 #--- Tempo para liberar a fala ---
 func _on_Timer_timeout():
@@ -71,4 +81,4 @@ func _on_Timer_timeout():
 # --- Quando passa o mouse por cima ---
 func _on_Butt_Inicio_mouse_entered():
 	_som_selec()
-	pass 
+

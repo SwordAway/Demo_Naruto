@@ -1,0 +1,193 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Cenas/Inimigos/Ninja/inimigo1_atk_wapon.png" type="Texture" id=1]
+[ext_resource path="res://Cenas/Habilidades/script_foice.gd" type="Script" id=2]
+[ext_resource path="res://Cenas/Efeitos_sonoros/som_acerta_shuriken_objeto.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Cenas/Efeitos_sonoros/som_acerta_shuriken_inimigo.mp3" type="AudioStream" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 14.2458
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("IMG_foice:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IMG_foice:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 4 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IMG_foice:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IMG_foice2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "foice"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("IMG_foice:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IMG_foice:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IMG_foice:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Anima:playback_speed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IMG_foice2:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("IMG_foice2:hframes")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("IMG_foice2:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[node name="Foice" type="Node2D"]
+
+[node name="Foice" type="Area2D" parent="."]
+scale = Vector2( 0.719895, 0.71308 )
+collision_layer = 4
+collision_mask = 2018
+script = ExtResource( 2 )
+
+[node name="Colli_foice" type="CollisionShape2D" parent="Foice"]
+shape = SubResource( 1 )
+
+[node name="IMG_foice" type="Sprite" parent="Foice"]
+texture = ExtResource( 1 )
+hframes = 4
+
+[node name="Colli_foice2" type="CollisionShape2D" parent="Foice"]
+position = Vector2( 9.43856, 4.0113 )
+shape = SubResource( 1 )
+
+[node name="IMG_foice2" type="Sprite" parent="Foice"]
+position = Vector2( 9.43856, 4.0113 )
+texture = ExtResource( 1 )
+hframes = 4
+
+[node name="Anima" type="AnimationPlayer" parent="Foice"]
+anims/RESET = SubResource( 2 )
+anims/foice = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="Foice"]
+wait_time = 1.5
+autostart = true
+
+[node name="Som_foice_shuriken" type="AudioStreamPlayer2D" parent="Foice"]
+stream = ExtResource( 3 )
+volume_db = -10.0
+
+[node name="Som_foice_acerta_corpo" type="AudioStreamPlayer2D" parent="Foice"]
+stream = ExtResource( 4 )
+volume_db = -10.0
+
+[connection signal="area_entered" from="Foice" to="Foice" method="_on_Foice_area_entered"]
+[connection signal="body_entered" from="Foice" to="Foice" method="_on_Foice_body_entered"]
+[connection signal="timeout" from="Foice/Timer" to="Foice" method="_on_Timer_timeout"]

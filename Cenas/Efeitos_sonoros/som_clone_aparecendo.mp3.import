@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som_clone_aparecendo.mp3-b42575236a3f04bfd70ee32315d839f3.mp3str"
+
+[deps]
+
+source_file="res://Cenas/Efeitos_sonoros/som_clone_aparecendo.mp3"
+dest_files=[ "res://.import/som_clone_aparecendo.mp3-b42575236a3f04bfd70ee32315d839f3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

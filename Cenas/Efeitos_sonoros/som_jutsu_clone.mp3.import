@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som_jutsu_clone.mp3-f43b9fd2229045d4705b6d96474d1d66.mp3str"
+
+[deps]
+
+source_file="res://Cenas/Efeitos_sonoros/som_jutsu_clone.mp3"
+dest_files=[ "res://.import/som_jutsu_clone.mp3-f43b9fd2229045d4705b6d96474d1d66.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

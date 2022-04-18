@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som_soco.mp3-b1aba8096a137f09903e2e981a3aece8.mp3str"
+
+[deps]
+
+source_file="res://Cenas/Efeitos_sonoros/som_soco.mp3"
+dest_files=[ "res://.import/som_soco.mp3-b1aba8096a137f09903e2e981a3aece8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

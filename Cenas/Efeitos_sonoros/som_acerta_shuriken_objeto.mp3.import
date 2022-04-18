@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som_acerta_shuriken_objeto.mp3-db3da1dce71da405e352ea783b9405bb.mp3str"
+
+[deps]
+
+source_file="res://Cenas/Efeitos_sonoros/som_acerta_shuriken_objeto.mp3"
+dest_files=[ "res://.import/som_acerta_shuriken_objeto.mp3-db3da1dce71da405e352ea783b9405bb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

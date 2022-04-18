@@ -1,0 +1,61 @@
+Habilidades especiais: Q W E R
+Socos: A
+Shuriken: S
+Quebra Defesa: D  
+
+Movimentação: Setas do teclado 
+
+
+
+Movimentação jogador 1 solo: Setas do teclado
+Habilidades jogador 1 Naruto: 
+Q - Jutsu ataque do clone
+W -
+E -
+R - Rasengan
+A - socos
+S - Shuriken
+T - Transformação
+
+Movimentação jogador 2 solo: Setas do teclado
+Habilidades jogador 2 Sasuke: 
+Q - Jutsu ataque do clone
+W - 
+E - Jutsu Bola de fogo
+R - Chidori
+A - socos
+S - Shuriken
+T - Transformação
+Espaço - Descer plataforma
+__________________________________________________
+
+Movimentação jogador 1 multiplayer: A W S D 
+Habilidades jogador 1 Naruto:
+H - Jutsu ataque do clone
+J - 
+K - 
+L - Rasengan 
+N - Socos
+M - Shuriken
+T - Transformação
+Espaço - Descer plataforma
+
+Movimentação jogador 2 multiplayer: Setas do teclado
+Habilidades jogador 1 Sasuke:
+8 - Jutsu ataque do clone
+4 - 
+5 - Jutsu bola de fogo
+6 - Chidori
+1 - Socos
+2 - Shuriken
+9 - Transformação
+0 - Descer plataforma
+
+
+
+
+_________________________________________
+
+Artistas: NEIMAD, 
+
+The legendary sheng long, darkrasengan, fernandinho_fm, Dob, kazushi
