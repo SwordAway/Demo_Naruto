@@ -42,20 +42,9 @@ func _reset():
 	ver_ranking = true
 	run = false
 
-	
-	
-	
-	
-	
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass 
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-
 	if(vida >= 100):
 		vida = 100
 	if(vida <= 0):

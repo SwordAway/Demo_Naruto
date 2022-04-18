@@ -45,7 +45,8 @@ func _selec():
 
 #_____________ controlando inicio da cena _____________
 func _ready():
-	if(ScriptGlobal.aviso == true):
+	
+	if(ScriptGlobal.aviso && ScriptGlobal.dispositivo):
 		$Avisos.visible = true
 	ScriptGlobal.cenario_excluir = true
 	ScriptGlobal.loading = 1
